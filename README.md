@@ -1,9 +1,9 @@
 # README #
 
-Sign in [v2ex.com][v2ex], and take the sign coins for you, also report your coin's status.
+Sign in [v2ex.com][v2ex], and take the daily award coins for you, and report your balance also.
 The script reads cookies from a json file, and then uses the cookies to access the site.
 
-The Python script only supports Python3 environment.
+Note: The Python script only supports **Python3** environment.
 
     Usage:
            py3_v2ex_daily.py --chk         show your balance and the last 20 records   
