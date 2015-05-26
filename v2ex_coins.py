@@ -42,7 +42,6 @@ def check_balance(balance_url, balance_chk, balance_date=''):
     return balance
 
 if __name__ == '__main__':
-#    print ('cmd arguments:', sys.argv, "\n".join(sys.argv))
     if not ('--coins' in sys.argv or '--chk' in sys.argv) or len(sys.argv)>2:
        print('Usage:\n\t{a} --chk\t\tshow your balance and the last 20 records\n\t{a} --coins\ttake daily sign award'\
                .format(a=sys.argv[0]))
@@ -62,8 +61,6 @@ if __name__ == '__main__':
 # Grab the object respond for the site via object requset, the site's cookies as well.
     rqst = urllib.request.Request(URL)
     rspd = opener.open(rqst)
-#    print(1, cj, cj._cookies)
-#    print(1, rqst.header_items(), rqst.get_full_url())
 
 # Read a JSON file for cookies' name and value.
     cookie_filename = '{}/{}'.format(get_file_path(), COOKIE_FILE)
@@ -98,8 +95,6 @@ if __name__ == '__main__':
           print(str().join(balance))
        else:
           print(datetime.now().strftime("%Y-%m-%d %I:%M:%S%p"), token_txt)
-          sys.exit(-1)
     else: 
       print('Oops, there\'s something wrong whit taking V2EX Coins.')
-      sys.exit(-1)
 
