@@ -58,11 +58,11 @@ if __name__ == '__main__':
         , ('Referer', CREDIT_ACTION)
     ]
 
-# Grab the object respond for the site via object requset, the site's cookies as well.
+# Grab the Object Respond for the site via Object Requset, the site's cookies as well.
     rqst = urllib.request.Request(URL)
     rspd = opener.open(rqst)
 
-# Read a JSON file for cookies' name and value.
+# Read cookie name and value from the file COOKIE_FILE as json file formation.
     cookie_filename = '{}/{}'.format(get_file_path(), COOKIE_FILE)
     with open(cookie_filename, encoding='utf8') as cookie_file:
         cookie = json.loads(cookie_file.read())
@@ -81,7 +81,7 @@ if __name__ == '__main__':
        print (str().join(balance))
        sys.exit(-1)
 
-# Check tokens; if got the tokens, take daily coins and check the balance. 
+# Check tokens; if got the tokens, take daily award coins and check balance. 
     data = opener.open(CREDIT_ACTION).read()
     tokens = re.search(CREDIT_TOKEN, data)
     if tokens:
@@ -96,5 +96,5 @@ if __name__ == '__main__':
        else:
           print(datetime.now().strftime("%Y-%m-%d %I:%M:%S%p"), token_txt)
     else: 
-      print('Oops, there\'s something wrong whit taking V2EX Coins.')
+      print('Oops, there\'s something wrong whit taking V2EX coins.')
 
