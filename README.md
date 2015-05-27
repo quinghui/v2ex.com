@@ -1,19 +1,21 @@
 # README #
 
-Sign in [v2ex.com][v2ex], and take the daily award coins for you, and report your balance also.
-The script reads cookies from a json file, and then uses the cookies to access the site.
+Sign in [v2ex.com][v2ex] and take the daily award coins for you.
+ This script *v2ex_coins.py* reads cookies from the json file *v2ex_cookie.json* to log [v2ex.com][v2ex] in.  
 
-Note: The Python script only supports **Python3** environment.
+Note: 
+
+- This Python script only supports **Python3** environment;
+- You may need to change the A2 value in the json file to your own v2ex.com cookie;
+- Both files *v2ex_coins.py* and *v2ex_cookie.json* would be in same directory.
 
     Usage:
-           py3_v2ex_daily.py --chk         show your balance and the last 20 records   
-           py3_v2ex_daily.py --coins       take daily sign award
+           v2ex_coins.py --chk         show your balance and the last 20 records   
+           v2ex_coins.py --coins       take sign award coins
 
-The contains of the cookies file *v2ex_cookie.json* following:
-
+The context of the cookie file *v2ex_cookie.json* looks like following:
      {
-     "A2": " "
+     "A2": "2|1:0|10:1432694436|2:A2|56:xxx...|xxxx..."
      }   
-
 
 [v2ex]:https://v2ex.com
