@@ -33,7 +33,12 @@ For example:
      "auth": "nnn..."
      }
 ```
- 
 
+The script **v2ex_coins_login.py** which signs in v2ex.com via username and password, not cookies, takes daily award coins or shows up your balance details. The username and password are in the json file **v2ex_user.json**.
+```
+    Usage:  
+            v2ex_coins_login.py --chk        show your balance and the last 20 records  
+            v2ex_coins_login.py --coins      take daily sign award  
+```
 
 [v2ex]:https://v2ex.com
